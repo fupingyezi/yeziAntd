@@ -1,0 +1,39 @@
+@import "../../styles/index.scss";
+
+.tabs {
+  position: relative;
+  display: flex;
+  list-style: none;
+  margin-bottom: 30px;
+  border-bottom: #f5f5f5 1px solid;
+  > .tabs-item {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: $menu-transition;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+    &.is-active,
+    &:hover {
+      color: $menu-item-active-color;
+      border-bottom: $menu-item-active-border-width solid
+        $menu-item-active-color;
+    }
+  }
+}
+
+.tabs-vertical {
+  flex-direction: column;
+  border-bottom: 0px;
+  margin: 10px 20px;
+  border-right: $menu-border-width solid #f5f5f5;
+  > .tabs-item {
+    border-left: $menu-item-active-border-width solid transparent;
+    &.is-active,
+    &:hover {
+      border-bottom: 0px;
+      border-left: $menu-item-active-border-width solid $menu-item-active-color;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@import '../../styles/index.scss';
+
+.input {
+    position: relative;
+    display: flex;
+    height: $input-default-height;
+    font-size: $input-default-font-size;
+    align-items: center;
+    border: #d9d9d9 1px solid;
+    text-align: center;
+    color: #1f1f1f;
+    border-radius: 5px;
+    white-space: nowrap;
+    &-prefix {
+        @extend .input-fix;
+        border-right: #d9d9d9 1px solid;
+        border-radius: 5px 0 0 5px;
+    }
+    &-suffix {
+        @extend .input-fix;
+        border-left: #d9d9d9 1px solid;
+        border-radius: 0 5px 5px 0;
+    }
+    &-inner {
+        height: 100%;
+        width: 100%;
+        border: none;
+        padding-left: $input-padding-x;
+        border-radius: 5px;
+        &:focus {
+            outline: none;
+            border: #1677ff 1px solid;
+        }
+    }
+}
+
+.input-fix {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    height: 100%;
+    padding: 0 5px;
+}
+
+.input-large-style {
+    height: $input-large-height;
+    font-size: $input-large-font-size;
+}
+
+.input-small-style {
+    height: $input-small-height;
+    font-size: $input-small-font-size;
+}
+
+.input-disabled-style {
+    color: #bfbfbf;
+}
+
+.prefix-border-radius {
+    border-radius: 0 5px 5px 0;
+}
+
+.suffix-border-redius {
+    border-radius: 5px 0 0 5px;
+}
+
+.fix-border-radius {
+    border-radius: 0;
+}

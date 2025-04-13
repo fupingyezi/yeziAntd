@@ -1,0 +1,50 @@
+@import '../../styles/index.scss';
+
+.alert {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    vertical-align: middle;
+    background-color: $alert-succuss-background-color;
+    border: $alert-succuss-border 1px solid;
+    padding: $alert-default-padding;
+    border-radius: $alert-default-border-radius;
+    width: 500px;
+    &-item-text {
+        font-size: $font-size-lg;
+    }
+    &-item-description {
+        line-height: 1.5;
+        font-size: medium;
+    }
+    &-close {
+        position: absolute;
+        right: 9px;
+        top: 9px;
+        cursor: pointer;
+    }
+}
+
+.alert-info {
+    background-color: $alert-info-background-color;
+    border: $alert-info-border 1px solid;
+}
+
+.alert-warning {
+    background-color: $alert-warning-background-color;
+    border: $alert-warning-border 1px solid;
+}
+
+.alert-error {
+    background-color: $alert-error-background-color;
+    border: $alert-error-border 1px solid;
+}
+
+.alert-description {
+    padding: $alert-description-padding;
+}
+
+.alert.isClose {
+    display: none;
+}

@@ -1,0 +1,59 @@
+{
+  "name": "myantd",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "lint": "eslint .",
+    "build": "pnpm run build:js && pnpm run build:types && pnpm run build:css",
+    "build:js": "vite build",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:storybook": "storybook build",
+    "test-storybook": "test-storybook"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "classnames": "^2.5.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-transition-group": "^4.4.5",
+    "sass": "1.62.1"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "3",
+    "@eslint/js": "^9.21.0",
+    "@storybook/addon-essentials": "8.6.12",
+    "@storybook/addon-interactions": "^8.6.12",
+    "@storybook/addon-onboarding": "8.6.12",
+    "@storybook/blocks": "8.6.12",
+    "@storybook/experimental-addon-test": "8.6.12",
+    "@storybook/react": "8.6.12",
+    "@storybook/react-vite": "8.6.12",
+    "@storybook/test": "8.6.12",
+    "@storybook/test-runner": "^0.22.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react-swc": "^3.8.0",
+    "@vitest/browser": "^3.1.1",
+    "@vitest/coverage-v8": "^3.1.1",
+    "eslint": "^9.21.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "eslint-plugin-storybook": "^0.12.0",
+    "globals": "^15.15.0",
+    "playwright": "^1.51.1",
+    "storybook": "8.6.12",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.24.1",
+    "vite": "^6.2.0",
+    "vitest": "^3.1.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
+  }
+}
