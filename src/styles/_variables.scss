@@ -282,7 +282,44 @@ $input-small-font-size: 0.6rem !default;
 
 $input-disabled-border: #f5f5f5 !default;
 $input-font-color: #f5f5f5 !default;
-
+ 
 $input-padding-x: 6px !default;
 $input-margin-left: 5px !default;
 
+//Select
+//size
+$select-default-width: 12rem !default;
+$select-default-height: 32px !default;
+$select-default-font: 14px !default;
+
+$select-large-width: 12rem !default;
+$select-large-height: 40px !default;
+$select-large-font: 16px !default;
+
+$select-small-width: 12rem !default;
+$select-small-height: 24px !default;
+$select-small-font: 12px !default;
+
+//border
+$select-border-radius: 8px !default;
+$select-border-color: #d9d9d9 !default;
+
+$select-border-active-color: #1677ff !default;
+$select-border-hover-color: #4096ff !default;
+
+//disabled
+$select-disabled-background-color: #f5f5f5 !default;
+$select-disabled-font-color: #b8b8b8 !default;
+
+//padding
+$select-default-padding-y: 0.375rem !default;
+$select-default-padding-x: 0.75rem !default;
+
+$select-large-padding-y: 0.5rem !default;
+$select-large-padding-x: 1rem !default;
+
+$select-small-padding-y: 0.25rem !default;
+$select-small-padding-x: 0.5rem !default;
+
+$select-option-default-padding-y: 0.375 !default;
+$select-option-default-padding-x: 0.75rem !default;

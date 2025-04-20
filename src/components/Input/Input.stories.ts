@@ -12,6 +12,7 @@ const meta = {
     argTypes: {
         size: { control: 'select', options: ['default', 'small', 'large'] },
         disabled: { control: 'boolean' },
+        perfix: {control:'text'},
     },
 } satisfies Meta<typeof Input>
 

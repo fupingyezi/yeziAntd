@@ -66,3 +66,9 @@
     transform-origin: $origin;
   }
 }
+
+@mixin select-size($width, $height, $font-size) {
+  width: $width;
+  height: $height;
+  font-size: $font-size;
+}
