@@ -1,0 +1,94 @@
+Date : 2025-04-28 08:09:28
+Directory : e:\project\arc\Component\myAntd\src
+Total : 55 files,  2307 codes, 478 comments, 466 blanks, all 3251 lines
+
+Languages
++----------------+------------+------------+------------+------------+------------+
+| language       | files      | code       | comment    | blank      | total      |
++----------------+------------+------------+------------+------------+------------+
+| TypeScript JSX |         22 |      1,155 |          7 |        146 |      1,308 |
+| SCSS           |         14 |        857 |        458 |        247 |      1,562 |
+| TypeScript     |         19 |        295 |         13 |         73 |        381 |
++----------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                     | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                        |         55 |      2,307 |        478 |        466 |      3,251 |
+| . (Files)                                                                |          2 |         20 |          1 |          2 |         23 |
+| components                                                               |         47 |      1,975 |         18 |        257 |      2,250 |
+| components\Alert                                                         |          5 |        135 |          0 |         23 |        158 |
+| components\Button                                                        |          5 |        224 |          1 |         31 |        256 |
+| components\Form                                                          |          6 |        301 |          9 |         51 |        361 |
+| components\Icon                                                          |          5 |         72 |          0 |         19 |         91 |
+| components\Input                                                         |          4 |        137 |          3 |         23 |        163 |
+| components\Menu                                                          |          7 |        342 |          2 |         33 |        377 |
+| components\Select                                                        |          4 |        277 |          2 |         25 |        304 |
+| components\Tabs                                                          |          6 |        162 |          1 |         22 |        185 |
+| components\UpLoad                                                        |          5 |        325 |          0 |         30 |        355 |
+| styles                                                                   |          5 |        308 |        458 |        205 |        971 |
+| typings                                                                  |          1 |          4 |          1 |          2 |          7 |
++--------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| filename                                                                 | language       | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| e:\project\arc\Component\myAntd\src\components\Alert\Alert.scss          | SCSS           |         44 |          0 |          6 |         50 |
+| e:\project\arc\Component\myAntd\src\components\Alert\Alert.stories.tsx   | TypeScript JSX |         40 |          0 |          6 |         46 |
+| e:\project\arc\Component\myAntd\src\components\Alert\Alert.test.ts       | TypeScript     |          0 |          0 |          1 |          1 |
+| e:\project\arc\Component\myAntd\src\components\Alert\Alert.tsx           | TypeScript JSX |         51 |          0 |          9 |         60 |
+| e:\project\arc\Component\myAntd\src\components\Alert\index.ts            | TypeScript     |          0 |          0 |          1 |          1 |
+| e:\project\arc\Component\myAntd\src\components\Button\Button.scss        | SCSS           |        106 |          0 |          9 |        115 |
+| e:\project\arc\Component\myAntd\src\components\Button\Button.stories.ts  | TypeScript     |         52 |          1 |          9 |         62 |
+| e:\project\arc\Component\myAntd\src\components\Button\Button.test.ts     | TypeScript     |         17 |          0 |          5 |         22 |
+| e:\project\arc\Component\myAntd\src\components\Button\Button.tsx         | TypeScript JSX |         46 |          0 |          7 |         53 |
+| e:\project\arc\Component\myAntd\src\components\Button\index.ts           | TypeScript     |          3 |          0 |          1 |          4 |
+| e:\project\arc\Component\myAntd\src\components\Form\Form.scss            | SCSS           |         17 |          0 |          1 |         18 |
+| e:\project\arc\Component\myAntd\src\components\Form\Form.stories.tsx     | TypeScript JSX |         44 |          0 |          5 |         49 |
+| e:\project\arc\Component\myAntd\src\components\Form\Form.tsx             | TypeScript JSX |         38 |          0 |          5 |         43 |
+| e:\project\arc\Component\myAntd\src\components\Form\FormItem.tsx         | TypeScript JSX |         46 |          1 |          8 |         55 |
+| e:\project\arc\Component\myAntd\src\components\Form\FormProvider.tsx     | TypeScript JSX |         13 |          0 |          4 |         17 |
+| e:\project\arc\Component\myAntd\src\components\Form\useForm.ts           | TypeScript     |        143 |          8 |         28 |        179 |
+| e:\project\arc\Component\myAntd\src\components\Icon\Icon.scss            | SCSS           |          6 |          0 |          2 |          8 |
+| e:\project\arc\Component\myAntd\src\components\Icon\Icon.stories.tsx     | TypeScript JSX |         34 |          0 |          6 |         40 |
+| e:\project\arc\Component\myAntd\src\components\Icon\Icon.test.ts         | TypeScript     |          0 |          0 |          1 |          1 |
+| e:\project\arc\Component\myAntd\src\components\Icon\Icon.tsx             | TypeScript JSX |         29 |          0 |          7 |         36 |
+| e:\project\arc\Component\myAntd\src\components\Icon\Index.ts             | TypeScript     |          3 |          0 |          3 |          6 |
+| e:\project\arc\Component\myAntd\src\components\Input\Input.scss          | SCSS           |         63 |          0 |          8 |         71 |
+| e:\project\arc\Component\myAntd\src\components\Input\Input.stories.ts    | TypeScript     |         32 |          0 |          8 |         40 |
+| e:\project\arc\Component\myAntd\src\components\Input\Input.tsx           | TypeScript JSX |         39 |          3 |          5 |         47 |
+| e:\project\arc\Component\myAntd\src\components\Input\index.ts            | TypeScript     |          3 |          0 |          2 |          5 |
+| e:\project\arc\Component\myAntd\src\components\Menu\Menu.scss            | SCSS           |        104 |          0 |          4 |        108 |
+| e:\project\arc\Component\myAntd\src\components\Menu\Menu.stories.tsx     | TypeScript JSX |         64 |          0 |          5 |         69 |
+| e:\project\arc\Component\myAntd\src\components\Menu\Menu.test.ts         | TypeScript     |          0 |          2 |          2 |          4 |
+| e:\project\arc\Component\myAntd\src\components\Menu\Menu.tsx             | TypeScript JSX |         70 |          0 |          9 |         79 |
+| e:\project\arc\Component\myAntd\src\components\Menu\MenuItem.tsx         | TypeScript JSX |         35 |          0 |          3 |         38 |
+| e:\project\arc\Component\myAntd\src\components\Menu\SubMenu.tsx          | TypeScript JSX |         62 |          0 |          8 |         70 |
+| e:\project\arc\Component\myAntd\src\components\Menu\index.ts             | TypeScript     |          7 |          0 |          2 |          9 |
+| e:\project\arc\Component\myAntd\src\components\Select\Select.scss        | SCSS           |         99 |          0 |          7 |        106 |
+| e:\project\arc\Component\myAntd\src\components\Select\Select.stories.tsx | TypeScript JSX |         41 |          0 |          5 |         46 |
+| e:\project\arc\Component\myAntd\src\components\Select\Select.tsx         | TypeScript JSX |        134 |          2 |         11 |        147 |
+| e:\project\arc\Component\myAntd\src\components\Select\index.ts           | TypeScript     |          3 |          0 |          2 |          5 |
+| e:\project\arc\Component\myAntd\src\components\Tabs\TabItem.tsx          | TypeScript JSX |         31 |          0 |          4 |         35 |
+| e:\project\arc\Component\myAntd\src\components\Tabs\Tabs.scss            | SCSS           |         37 |          0 |          3 |         40 |
+| e:\project\arc\Component\myAntd\src\components\Tabs\Tabs.stories.tsx     | TypeScript JSX |         37 |          0 |          4 |         41 |
+| e:\project\arc\Component\myAntd\src\components\Tabs\Tabs.test.ts         | TypeScript     |          0 |          0 |          1 |          1 |
+| e:\project\arc\Component\myAntd\src\components\Tabs\Tabs.tsx             | TypeScript JSX |         52 |          1 |          8 |         61 |
+| e:\project\arc\Component\myAntd\src\components\Tabs\index.ts             | TypeScript     |          5 |          0 |          2 |          7 |
+| e:\project\arc\Component\myAntd\src\components\UpLoad\Upload.scss        | SCSS           |         73 |          0 |          2 |         75 |
+| e:\project\arc\Component\myAntd\src\components\UpLoad\Upload.stories.tsx | TypeScript JSX |         34 |          0 |          6 |         40 |
+| e:\project\arc\Component\myAntd\src\components\UpLoad\Upload.tsx         | TypeScript JSX |        161 |          0 |         12 |        173 |
+| e:\project\arc\Component\myAntd\src\components\UpLoad\UploadList.tsx     | TypeScript JSX |         54 |          0 |          9 |         63 |
+| e:\project\arc\Component\myAntd\src\components\UpLoad\index.ts           | TypeScript     |          3 |          0 |          1 |          4 |
+| e:\project\arc\Component\myAntd\src\index.ts                             | TypeScript     |          1 |          0 |          0 |          1 |
+| e:\project\arc\Component\myAntd\src\styles\_animation.scss               | SCSS           |          4 |          0 |          0 |          4 |
+| e:\project\arc\Component\myAntd\src\styles\_mixin.scss                   | SCSS           |         71 |          0 |          4 |         75 |
+| e:\project\arc\Component\myAntd\src\styles\_reboot.scss                  | SCSS           |          8 |        424 |        131 |        563 |
+| e:\project\arc\Component\myAntd\src\styles\_variables.scss               | SCSS           |        221 |         34 |         70 |        325 |
+| e:\project\arc\Component\myAntd\src\styles\index.scss                    | SCSS           |          4 |          0 |          0 |          4 |
+| e:\project\arc\Component\myAntd\src\typings\index.d.ts                   | TypeScript     |          4 |          1 |          2 |          7 |
+| e:\project\arc\Component\myAntd\src\vite-env.d.ts                        | TypeScript     |         19 |          1 |          2 |         22 |
+| Total                                                                    |                |      2,307 |        478 |        466 |      3,251 |
++--------------------------------------------------------------------------+----------------+------------+------------+------------+------------+

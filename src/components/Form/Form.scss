@@ -1,0 +1,28 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start;  
+    > .form-item {
+        display: flex;
+        gap: 10px;
+        width: 100%;
+        justify-content: flex-start; 
+        
+        > .form-item-label {
+            text-align: right;   
+            min-width: 80px;    
+        }
+    }
+}
+
+.form-item-error {
+    color: #ff4d4f;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.error {
+    border-color: #ff4d4f !important;
+}

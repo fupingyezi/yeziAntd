@@ -1,0 +1,57 @@
+"filename", "language", "TypeScript", "SCSS", "TypeScript JSX", "comment", "blank", "total"
+"e:\project\arc\Component\myAntd\src\components\Alert\Alert.scss", "SCSS", 0, 44, 0, 0, 6, 50
+"e:\project\arc\Component\myAntd\src\components\Alert\Alert.stories.tsx", "TypeScript JSX", 0, 0, 40, 0, 6, 46
+"e:\project\arc\Component\myAntd\src\components\Alert\Alert.test.ts", "TypeScript", 0, 0, 0, 0, 1, 1
+"e:\project\arc\Component\myAntd\src\components\Alert\Alert.tsx", "TypeScript JSX", 0, 0, 51, 0, 9, 60
+"e:\project\arc\Component\myAntd\src\components\Alert\index.ts", "TypeScript", 0, 0, 0, 0, 1, 1
+"e:\project\arc\Component\myAntd\src\components\Button\Button.scss", "SCSS", 0, 106, 0, 0, 9, 115
+"e:\project\arc\Component\myAntd\src\components\Button\Button.stories.ts", "TypeScript", 52, 0, 0, 1, 9, 62
+"e:\project\arc\Component\myAntd\src\components\Button\Button.test.ts", "TypeScript", 17, 0, 0, 0, 5, 22
+"e:\project\arc\Component\myAntd\src\components\Button\Button.tsx", "TypeScript JSX", 0, 0, 46, 0, 7, 53
+"e:\project\arc\Component\myAntd\src\components\Button\index.ts", "TypeScript", 3, 0, 0, 0, 1, 4
+"e:\project\arc\Component\myAntd\src\components\Form\Form.scss", "SCSS", 0, 17, 0, 0, 1, 18
+"e:\project\arc\Component\myAntd\src\components\Form\Form.stories.tsx", "TypeScript JSX", 0, 0, 44, 0, 5, 49
+"e:\project\arc\Component\myAntd\src\components\Form\Form.tsx", "TypeScript JSX", 0, 0, 38, 0, 5, 43
+"e:\project\arc\Component\myAntd\src\components\Form\FormItem.tsx", "TypeScript JSX", 0, 0, 46, 1, 8, 55
+"e:\project\arc\Component\myAntd\src\components\Form\FormProvider.tsx", "TypeScript JSX", 0, 0, 13, 0, 4, 17
+"e:\project\arc\Component\myAntd\src\components\Form\useForm.ts", "TypeScript", 143, 0, 0, 8, 28, 179
+"e:\project\arc\Component\myAntd\src\components\Icon\Icon.scss", "SCSS", 0, 6, 0, 0, 2, 8
+"e:\project\arc\Component\myAntd\src\components\Icon\Icon.stories.tsx", "TypeScript JSX", 0, 0, 34, 0, 6, 40
+"e:\project\arc\Component\myAntd\src\components\Icon\Icon.test.ts", "TypeScript", 0, 0, 0, 0, 1, 1
+"e:\project\arc\Component\myAntd\src\components\Icon\Icon.tsx", "TypeScript JSX", 0, 0, 29, 0, 7, 36
+"e:\project\arc\Component\myAntd\src\components\Icon\Index.ts", "TypeScript", 3, 0, 0, 0, 3, 6
+"e:\project\arc\Component\myAntd\src\components\Input\Input.scss", "SCSS", 0, 63, 0, 0, 8, 71
+"e:\project\arc\Component\myAntd\src\components\Input\Input.stories.ts", "TypeScript", 32, 0, 0, 0, 8, 40
+"e:\project\arc\Component\myAntd\src\components\Input\Input.tsx", "TypeScript JSX", 0, 0, 39, 3, 5, 47
+"e:\project\arc\Component\myAntd\src\components\Input\index.ts", "TypeScript", 3, 0, 0, 0, 2, 5
+"e:\project\arc\Component\myAntd\src\components\Menu\Menu.scss", "SCSS", 0, 104, 0, 0, 4, 108
+"e:\project\arc\Component\myAntd\src\components\Menu\Menu.stories.tsx", "TypeScript JSX", 0, 0, 64, 0, 5, 69
+"e:\project\arc\Component\myAntd\src\components\Menu\Menu.test.ts", "TypeScript", 0, 0, 0, 2, 2, 4
+"e:\project\arc\Component\myAntd\src\components\Menu\Menu.tsx", "TypeScript JSX", 0, 0, 70, 0, 9, 79
+"e:\project\arc\Component\myAntd\src\components\Menu\MenuItem.tsx", "TypeScript JSX", 0, 0, 35, 0, 3, 38
+"e:\project\arc\Component\myAntd\src\components\Menu\SubMenu.tsx", "TypeScript JSX", 0, 0, 62, 0, 8, 70
+"e:\project\arc\Component\myAntd\src\components\Menu\index.ts", "TypeScript", 7, 0, 0, 0, 2, 9
+"e:\project\arc\Component\myAntd\src\components\Select\Select.scss", "SCSS", 0, 99, 0, 0, 7, 106
+"e:\project\arc\Component\myAntd\src\components\Select\Select.stories.tsx", "TypeScript JSX", 0, 0, 41, 0, 5, 46
+"e:\project\arc\Component\myAntd\src\components\Select\Select.tsx", "TypeScript JSX", 0, 0, 134, 2, 11, 147
+"e:\project\arc\Component\myAntd\src\components\Select\index.ts", "TypeScript", 3, 0, 0, 0, 2, 5
+"e:\project\arc\Component\myAntd\src\components\Tabs\TabItem.tsx", "TypeScript JSX", 0, 0, 31, 0, 4, 35
+"e:\project\arc\Component\myAntd\src\components\Tabs\Tabs.scss", "SCSS", 0, 37, 0, 0, 3, 40
+"e:\project\arc\Component\myAntd\src\components\Tabs\Tabs.stories.tsx", "TypeScript JSX", 0, 0, 37, 0, 4, 41
+"e:\project\arc\Component\myAntd\src\components\Tabs\Tabs.test.ts", "TypeScript", 0, 0, 0, 0, 1, 1
+"e:\project\arc\Component\myAntd\src\components\Tabs\Tabs.tsx", "TypeScript JSX", 0, 0, 52, 1, 8, 61
+"e:\project\arc\Component\myAntd\src\components\Tabs\index.ts", "TypeScript", 5, 0, 0, 0, 2, 7
+"e:\project\arc\Component\myAntd\src\components\UpLoad\Upload.scss", "SCSS", 0, 73, 0, 0, 2, 75
+"e:\project\arc\Component\myAntd\src\components\UpLoad\Upload.stories.tsx", "TypeScript JSX", 0, 0, 34, 0, 6, 40
+"e:\project\arc\Component\myAntd\src\components\UpLoad\Upload.tsx", "TypeScript JSX", 0, 0, 161, 0, 12, 173
+"e:\project\arc\Component\myAntd\src\components\UpLoad\UploadList.tsx", "TypeScript JSX", 0, 0, 54, 0, 9, 63
+"e:\project\arc\Component\myAntd\src\components\UpLoad\index.ts", "TypeScript", 3, 0, 0, 0, 1, 4
+"e:\project\arc\Component\myAntd\src\index.ts", "TypeScript", 1, 0, 0, 0, 0, 1
+"e:\project\arc\Component\myAntd\src\styles\_animation.scss", "SCSS", 0, 4, 0, 0, 0, 4
+"e:\project\arc\Component\myAntd\src\styles\_mixin.scss", "SCSS", 0, 71, 0, 0, 4, 75
+"e:\project\arc\Component\myAntd\src\styles\_reboot.scss", "SCSS", 0, 8, 0, 424, 131, 563
+"e:\project\arc\Component\myAntd\src\styles\_variables.scss", "SCSS", 0, 221, 0, 34, 70, 325
+"e:\project\arc\Component\myAntd\src\styles\index.scss", "SCSS", 0, 4, 0, 0, 0, 4
+"e:\project\arc\Component\myAntd\src\typings\index.d.ts", "TypeScript", 4, 0, 0, 1, 2, 7
+"e:\project\arc\Component\myAntd\src\vite-env.d.ts", "TypeScript", 19, 0, 0, 1, 2, 22
+"Total", "-", 295, 857, 1155, 478, 466, 3251

@@ -1,55 +1,40 @@
-import React, { CSSProperties, createContext } from "react";
-import classNames from "classnames";
+import React from "react";
+import { useForm, FormInstance } from "./useForm";
+import { FormProvider } from "./FormProvider";
 
-export type ValidateErrors = {
-  type: "required" | "format" | "custom";
-  message: string;
-};
-
-export interface FormProps {
+export interface FormProps<Values = any> {
   name?: string;
-  onFinish?: (value: Record<string, any>) => void;
-  onFinishFailed?: (
-    value: Record<string, any>,
-    errors: Record<string, ValidateErrors[]>
-  ) => void;
-  initialValues?: Record<string, any>;
+  initialValues?: Record<string, Values>;
+  form?: FormInstance<Values>;
+  onFinish?: (values: Values) => void;
+  onFinishFailed?: (error: Values) => void;
   children?: React.ReactNode;
-  className?: string;
-  style?: CSSProperties;
 }
-
-export interface IFormContext {
-  onFinish?: (value: Record<string, any>) => void;
-  onFinishFailed?: (
-    value: Record<string, any>,
-    errors: Record<string, ValidateErrors[]>
-  ) => void;
-  initialValues?: Record<string, any>;
-}
-
-const FormContext = createContext<IFormContext>({});
 
 const Form: React.FC<FormProps> = ({
   name,
   initialValues,
+  form,
   onFinish,
-  onFinishFailed,
   children,
-  className,
-  style,
+  onFinishFailed,
 }) => {
-  const classes = classNames("form", className);
-  const passesContext: IFormContext = {
-    initialValues: initialValues,
-    onFinish: onFinish,
-    onFinishFailed: onFinishFailed,
-  };
+  const [formInstance] = useForm(form);
+
+  formInstance.setCallbacks({ onFinish, onFinishFailed });
+  if (initialValues) {
+    formInstance.setFieldsValue(initialValues);
+  }
   return (
-    <form name={name} className={classes} style={style}>
-      <FormContext.Provider value={passesContext}>
-        {children}
-      </FormContext.Provider>
+    <form
+      className="form"
+      name={name ?? ""}
+      onSubmit={(e) => {
+        e.preventDefault();
+        formInstance.submit();
+      }}
+    >
+      <FormProvider form={formInstance}>{children}</FormProvider>
     </form>
   );
 };
