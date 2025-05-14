@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from "react";
+import React, { ChangeEvent, useEffect } from "react";
 import { useFormContext, Rule } from "./useForm";
 import "./Form.scss";
 import classNames from "classnames";
@@ -20,10 +20,21 @@ const FormItem: React.FC<FormItemProps> = ({
 }) => {
   const {
     getFieldValue,
+    getFieldsValue,
     setFieldsValue,
     setValidateFieldsRules,
     getFieldsError,
   } = useFormContext();
+
+  useEffect(() => {
+    const currentStore = getFieldsValue?.() || {};
+    if (!Object.prototype.hasOwnProperty.call(currentStore, name)) {
+      setFieldsValue?.({ [name]: undefined }, "SETFVALUE");
+      if (rule) {
+        setValidateFieldsRules?.(name, rule);
+      }
+    }
+  }, [name]);
 
   const isRequired = required || rule?.required;
   const filedError = getFieldsError?.().find((error) => error.name === name);
@@ -33,11 +44,9 @@ const FormItem: React.FC<FormItemProps> = ({
       value: getFieldValue?.(name),
       onChange: (e: ChangeEvent<HTMLInputElement>) => {
         const newValue = e.target.value;
-        setFieldsValue?.({ [name]: newValue });
-        if (rule) {
-          setValidateFieldsRules?.(name, rule);
-        }
+        setFieldsValue?.({ [name]: newValue }, "SETFVALUE");
       },
+      className: classNames({ error: filedError !== undefined }),
     };
   };
 
@@ -51,7 +60,6 @@ const FormItem: React.FC<FormItemProps> = ({
       </label>
       {React.cloneElement(children as React.ReactElement, {
         ...getControlled(),
-        className: classNames({ "error": filedError !== undefined }),
       })}
       {filedError && (
         <div className="form-item-error">{filedError?.message}</div>

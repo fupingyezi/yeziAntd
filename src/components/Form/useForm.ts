@@ -4,7 +4,7 @@ export type StoreValue = any;
 export type Store = Record<string, StoreValue>;
 export type NamePath = string | number;
 
-//error测验
+//error测验规则
 export type validateRules = Record<string, Rule>;
 
 export interface ValidateError {
@@ -13,12 +13,12 @@ export interface ValidateError {
 }
 
 export interface Rule {
-  required?: boolean;
-  minLength?: number;
-  maxLength?: number;
-  pattern?: RegExp;
-  type?: "email" | "url";
-  message?: string;
+  required?: boolean; //是否必填
+  minLength?: number; //最小长度
+  maxLength?: number; //最大长度
+  pattern?: RegExp; //正则表达式匹配
+  type?: "email" | "url"; //类型校验
+  message?: string; //自定义错误信息
 }
 
 export interface Callbacks<Values = any> {
@@ -30,7 +30,7 @@ export interface FormInstance<Values = any> {
   getFieldValue: (name: NamePath) => StoreValue;
   submit: () => void;
   getFieldsValue: () => Values;
-  setFieldsValue: (newStore: Store) => void;
+  setFieldsValue: (newStore: Store, type: "SETFVALUE" | "INITIALIZE") => void;
   setCallbacks: (callbacks: Callbacks) => void;
   validateFields: () => Promise<Values>;
   setValidateFieldsRules: (name: string, rules: Rule) => void;
@@ -40,12 +40,22 @@ export interface FormInstance<Values = any> {
 type Action =
   | { type: "SETFVALUE"; payload: { name: NamePath; value: StoreValue } }
   | { type: "SETCALLBACKS"; payload: Callbacks }
-  | { type: "SUBMIT" };
+  | { type: "SUBMIT" }
+  | { type: "INITIALIZE"; payload: { initialValues: Store } };
 
+/**
+ * 表单状态管理器
+ *
+ * @param state 当前表单状态
+ * @param action 需要执行的动作
+ * @returns 更新后的表单状态
+ */
 const formReducer = (state: Store, action: Action): Store => {
   switch (action.type) {
     case "SETFVALUE":
       return { ...state, [action.payload.name]: action.payload.value };
+    case "INITIALIZE":
+      return action.payload.initialValues;
     default:
       return state;
   }
@@ -67,18 +77,36 @@ export const useForm = <Values = any>(
     return [form];
   }
 
-  const getFieldsValue = () => store as Values;
-  const getFieldValue = (name: NamePath) => store[name];
-  const setFieldsValue = (newStore: Store) => {
-    Object.entries(newStore).forEach(([name, value]) => {
-      dispatch({
-        type: "SETFVALUE",
-        payload: {
-          name: name,
-          value: value,
-        },
+  const getFieldsValue = () => store as Values; // 获取所有表单值
+  const getFieldValue = (name: NamePath) => store[name]; // 获取单个表单值
+
+  /**
+   * 设置字段值
+   *
+   * @param newStore 要设置的值，类型为 Store 类型
+   * @param type 设置值的类型，可选值为 "SETFVALUE" 或 "INITIALIZE"
+   */
+  const setFieldsValue = (
+    newStore: Store,
+    type: Action["type"] = "SETFVALUE"
+  ) => {
+    if (type === "INITIALIZE") {
+      dispatch({ type: "INITIALIZE", payload: { initialValues: newStore } });
+      return;
+    } else if (type === "SETFVALUE") {
+      setErrors(() => errors.filter((error) => !Object.keys(newStore).includes(error.name)))
+      Object.entries(newStore).forEach(([name, value]) => {
+        dispatch({
+          type: "SETFVALUE",
+          payload: {
+            name: name,
+            value: value,
+          },
+        });
       });
-    });
+    } else {
+      throw new Error("Invalid type for setFieldsValue");
+    }
   };
 
   const setCallbacks = (callbacks: Callbacks) => {
@@ -86,19 +114,24 @@ export const useForm = <Values = any>(
   };
 
   const setValidateFieldsRules = (name: string, rules: Rule) => {
-    setValidateRules({ ...validateRules, [name]: rules });
+    setValidateRules((preValidateRules) => {
+      const newRules = Object.assign({}, preValidateRules);
+      newRules[name] = rules;
+      return newRules;
+    });
   };
 
   const validateFields = async () => {
     const values = getFieldsValue() as Store;
     const newErrors: ValidateError[] = [];
+    // console.log(validateRules);
+    setErrors([]);
 
     Object.entries(validateRules).forEach(([name, rules]) => {
       const value = values[name];
-      console.log(value);
 
       // 处理required规则
-      if (rules.required && !value || value === undefined || value === null) {
+      if ((rules.required && !value) || value === undefined || value === null) {
         newErrors.push({
           name,
           message: rules.message || `${name} is required`,
@@ -146,12 +179,11 @@ export const useForm = <Values = any>(
   const submit = () => {
     validateFields()
       .then(() => {
-        console.log('Success:\n');
+        console.log("Success:\n");
         callbacksRef.current.onFinish?.(getFieldsValue());
       })
       .catch((errors) => {
-        // console.log(errors+':\n');
-        // callbacksRef.current.onFinishFailed?.(getFieldsValue());
+        console.log("Failed:\n");
         callbacksRef.current.onFinishFailed?.(errors);
       });
   };
@@ -166,7 +198,6 @@ export const useForm = <Values = any>(
     validateFields,
     getFieldsError,
   };
-  // console.log(formInstance);
 
   return [formInstance];
 };

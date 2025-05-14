@@ -20,11 +20,12 @@ const Form: React.FC<FormProps> = ({
   onFinishFailed,
 }) => {
   const [formInstance] = useForm(form);
-
   formInstance.setCallbacks({ onFinish, onFinishFailed });
+
   if (initialValues) {
-    formInstance.setFieldsValue(initialValues);
+    formInstance.setFieldsValue(initialValues, "INITIALIZE");
   }
+  
   return (
     <form
       className="form"
